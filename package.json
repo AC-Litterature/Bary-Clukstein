@@ -4,7 +4,7 @@
   "description": "Nouvelle 'Bary Clukstein'",
   "scripts": {
     "dev": "concurrently --kill-others \"npm run buildWatch\" \"npm run browser\"",
-    "build": "tsc",
+    "build": "tsc && browserify -t brfs dist/index.js -o dist/browser.js",
     "buildWatch": "tsc -w",
     "open": "index.html",
     "browser": "watchify -t brfs dist/index.js -o dist/browser.js"
