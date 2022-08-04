@@ -1,0 +1,389 @@
+
+@font-face {
+    font-family: ibm_pgc;
+    src: url('fonts/Web437_IBM_PGC.woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ibm_pgc;
+    
+    image-rendering: pixelated;
+    image-rendering: -moz-pixelated;
+    user-select: none;
+}
+
+.desktop-session-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.desktop-session-screen .icon img {
+    width: calc(100vh / 9);
+    height: auto;
+}
+
+img {
+    user-select: none;
+}
+
+.screen {
+    display: inline-block;
+    width: calc(1000 * (100vh - 4rem) / 800);
+    height: calc(100vh - 4rem);
+    position: relative;
+    overflow: hidden;
+    line-height: normal;
+}
+.screen-wrapper {
+    line-height: 0px;
+}
+
+.screen-border-bottom {
+    height: 1rem;
+    border-bottom-left-radius: 50%;
+    background-color: #2a2a2a;
+    border-bottom-right-radius: 50%;
+}
+.screen-border-top {
+    height: 1rem;
+    border-top-left-radius: 50%;
+    background-color: #2a2a2a;
+    border-top-right-radius: 50%;
+}
+.session-closed .screen-border-top,
+.session-closed .screen-border-bottom {
+    background-color: black;
+}
+
+.desktop-content {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.desktop {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1ch;
+    background-image: url('img/fonds/fond bureau.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.session-closed .desktop {
+    background-image: url('img/fonds/fond bureau session fermée.jpg');
+}
+
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon.file > img {
+    width: calc(100vh / 11);
+    height: auto;
+}
+.icon.active > img.neutral,
+.icon:not(.active) > img.active {
+    display: none;
+}
+.icon:not(.active) > img.neutral,
+.icon.active > img.active {
+    display: inline-block;
+}
+
+.icon.active {
+    color: black;
+}
+.icon:not(.active) {
+    color: #676767;
+}
+
+.folder-title,
+.image-file-title,
+.text-file-title {
+    position: absolute;
+    width: 100%;
+    font-size: calc(100vh / 40);
+}
+.folder-title {
+    top: 0.9em;
+    left: 0.6ch;
+}
+.text-file-title {
+    top: 0.2em;
+    left: 0.7ch;
+}
+.image-file-title {
+    text-align: center;
+    bottom: 5%;
+}
+
+.window {
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 0.5ch 0.5ch 0.5ch;
+    width: 50%;
+    position: absolute;
+    background-color: rgb(242, 242, 242);
+}
+.window .header {
+    position: relative;
+    line-height: 0px;
+}
+.window .header img.background {
+    width: 100%;
+    height: auto;
+}
+.window .header .close-btn img {
+    width: auto;
+    height: 100%;
+    float: right;
+}
+.window .header .close-btn {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    height: 90%;
+}
+
+.window-content {
+    font-size: calc((1000 * (100vh - 4rem) / 800 - 2ch) / 50);
+    height: calc(100% - (45 / 883) * 100vh);
+}
+
+.window-text-file-left .text,
+.window-text-file-right .text {
+    white-space: pre;
+    padding: 2ch;
+    line-height: 125%;
+}
+.window-text-file-left,
+.window-text-file-right {
+    background-image: url('img/bandeaux/bandeau bas vide.png');
+    background-repeat: no-repeat;
+    background-position: 0px 100%;
+    background-size: 50% auto;
+}
+.window-text-file-left .footer-text,
+.window-text-file-right .footer-text {
+    position: absolute;
+    bottom: -0.1em;
+    color: rgb(242, 242, 242);
+    padding-left: 1ch;
+}
+.window-text-file-left .nav,
+.window-text-file-right .nav {
+    bottom: 0.5em;
+    right: 0px;
+    width: 50%;
+}
+
+.nav {
+    position: absolute;
+    text-align: center;
+}
+
+.window-text-file-left,
+.window-image-viewer {
+    top: 0px;
+    left: 0px;
+    height: 65%;
+}
+.window-folder {
+    top: 65%;
+    left: 0px;
+    height: calc(100% - 65%);
+}
+
+.password-char-list.ping .password-char,
+.password-char.ping {
+    background-color: black;
+}
+.password-char-list {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1ch;
+    margin-bottom: 1ch;
+    user-select: none;
+}
+.password-char {
+    display: inline-block;
+    height: 1em;
+    margin-right: 0.75ch;
+    margin-left: 0.75ch;
+    border: 1px solid black;
+    padding-right: 0.25ch;
+    padding-left: 0.25ch;
+    background-color: white;
+    line-height: 1em;
+}
+.window-password .header-text {
+    text-align: center;
+    margin-top: 1ch;
+}
+.window-password {
+    top: 25%;
+    left: 25%;
+    display: inline-block;
+    z-index: 1;
+}
+.window-text-file-right {
+    top: 0px;
+    left: 50%;
+    height: 100%;
+}
+
+.window-folder .window-content {
+    position: relative;
+}
+.window-folder .nav {
+    top: 15%;
+    right: 0.3ch;
+    width: 5ch;
+}
+.window-folder .nav .arrow-up {
+    margin-bottom: 100%
+}
+.window-folder .nav .arrow-down {
+    margin-top: 100%;
+}
+.window-folder .file {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.window-image-viewer .nav {
+    bottom: 0px;
+    width: 100%;
+}
+.window-image-viewer .nav .arrow-left {
+    float: left;
+}
+.window-image-viewer .nav .arrow-right {
+    float: right;
+}
+
+.arrow-down img,
+.arrow-up img,
+.arrow-left img,
+.arrow-right img {
+    width: calc((1000 * (100vh - 4rem) / 800 - 2ch) * 0.04);
+    height: auto;
+    image-rendering: optimizequality;
+}
+.arrow-down,
+.arrow-up {
+    margin-right: 10%;
+}
+.arrow-left,
+.arrow-right {
+    vertical-align: middle;
+    margin-right: 1.5ch;
+    margin-left: 1.5ch;
+}
+.arrow-left {
+    transform: scaleX(-1);
+}
+.arrow-down {
+    transform: rotate(90deg);
+}
+.arrow-up {
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.desktop-content > .icon {
+    position: absolute;
+}
+
+.file-z426 {
+    left: 3%;
+    bottom: 46.6%;
+}
+.file-01bcr {
+    left: 3%;
+    top: 24.5%;
+}
+.file-02bcr {
+    left: 15%;
+    top: 24.5%;
+}
+.file-lowell {
+    left: 3%;
+    bottom: 28.6%;
+}
+.file-session {
+    left: 3%;
+    bottom: 2%;
+}
+.file-01bcp {
+    left: 3%;
+    bottom: 15%;
+}
+.file-02bcp {
+    left: 15%;
+    bottom: 15%;
+}
+.file-03bcp {
+    left: 15%;
+    bottom: 29%;
+}
+
+.window-image-viewer .image-wrapper {
+    height: calc(100% - (40 / 883) * 100vh - 2%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 1%;
+}
+
+
+
+
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+
+    80% {
+        bottom: 100%;
+    }
+
+    100% {
+        bottom: -100px;
+    }
+}
+
+.scanline {
+    width  : 100%;
+    height : 100px;
+    z-index: 8;
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(255, 255, 255, 0.2) 10%,
+            rgba(15, 15, 15, 0.23) 100%);
+    opacity       : 0.1;
+    position      : absolute;
+    bottom        : 100%;
+    animation     : scanline 10s linear infinite;
+    pointer-events: none;
+}
