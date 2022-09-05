@@ -1,6 +1,5 @@
 import { Desktop } from "./Desktop";
 import { View } from "./View";
-import { FolderWindow, ImageViewerWindow, TextFileWindow, Window } from "./Window";
 
 export class Screen {
     public static instance = new Screen();

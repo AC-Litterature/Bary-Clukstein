@@ -24,8 +24,8 @@ class Window {
     }
     createArrow(direction, isVisible, onClick) {
         const arrow = new Icon_1.Icon();
-        arrow.activeImageUrl = 'assets/img/flèche/fleche active.png';
-        arrow.neutralImageUrl = 'assets/img/flèche/fleche neutre.png';
+        arrow.activeImageUrl = 'assets/img/fleche/fleche active.png';
+        arrow.neutralImageUrl = 'assets/img/fleche/fleche neutre.png';
         const view = arrow.view;
         view.class(`arrow-${direction}`);
         if (!isVisible) {

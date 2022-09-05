@@ -6,7 +6,7 @@ const toPath = (root: string, files: string[]) => files.map(fileName => `assets/
 
 ImagePreload.preload(...[
     ...toPath('bandeaux', fs.readdirSync(`assets/img/bandeaux`)),
-    ...toPath('flèche', fs.readdirSync(`assets/img/flèche`)),
+    ...toPath('fleche', fs.readdirSync(`assets/img/fleche`)),
     ...toPath('fonds', fs.readdirSync(`assets/img/fonds`)),
     ...toPath('icones', fs.readdirSync(`assets/img/icones`)),
 ]);

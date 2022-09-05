@@ -65,8 +65,8 @@ class Desktop {
             view.div(view => {
                 view.class('desktop-session-screen');
                 const icon = new Icon_1.Icon();
-                icon.activeImageUrl = `assets/img/icones/icone demarrage session fermée active.png`;
-                icon.neutralImageUrl = `assets/img/icones/icone demarrage session fermée neutre.png`;
+                icon.activeImageUrl = `assets/img/icones/icone demarrage session fermee active.png`;
+                icon.neutralImageUrl = `assets/img/icones/icone demarrage session fermee neutre.png`;
                 const iconView = icon.view;
                 iconView.onClick(() => {
                     this.isSessionOpen = true;

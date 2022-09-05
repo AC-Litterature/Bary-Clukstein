@@ -67,8 +67,8 @@ class Desktop {
             view.div(view => {
                 view.class('desktop-session-screen');
                 const icon = new Icon_1.Icon();
-                icon.activeImageUrl = `assets/img/icones/icone demarrage session fermée active.png`;
-                icon.neutralImageUrl = `assets/img/icones/icone demarrage session fermée neutre.png`;
+                icon.activeImageUrl = `assets/img/icones/icone demarrage session fermee active.png`;
+                icon.neutralImageUrl = `assets/img/icones/icone demarrage session fermee neutre.png`;
                 const iconView = icon.view;
                 iconView.onClick(() => {
                     this.isSessionOpen = true;
@@ -335,8 +335,8 @@ class Window {
     }
     createArrow(direction, isVisible, onClick) {
         const arrow = new Icon_1.Icon();
-        arrow.activeImageUrl = 'assets/img/flèche/fleche active.png';
-        arrow.neutralImageUrl = 'assets/img/flèche/fleche neutre.png';
+        arrow.activeImageUrl = 'assets/img/fleche/fleche active.png';
+        arrow.neutralImageUrl = 'assets/img/fleche/fleche neutre.png';
         const view = arrow.view;
         view.class(`arrow-${direction}`);
         if (!isVisible) {
@@ -684,9 +684,9 @@ const Screen_1 = require("./Screen");
 const toPath = (root, files) => files.map(fileName => `assets/img/${root}/${fileName}`);
 ImagePreload_1.ImagePreload.preload(...[
     ...toPath('bandeaux', ["bandeau bas vide.png","bandeau haut fond.jpg","croix active.jpg","croix neutre.jpg"]),
-    ...toPath('flèche', ["fleche active.png","fleche neutre.png"]),
+    ...toPath('fleche', ["fleche active.png","fleche neutre.png"]),
     ...toPath('fonds', ["fond bureau session fermée.jpg","fond bureau.jpg"]),
-    ...toPath('icones', ["icone demarrage session fermée active.png","icone demarrage session fermée neutre.png","icone demarrage session ouverte active.png","icone demarrage session ouverte neutre.png","icone document active.png","icone document neutre.png","icone dossier active.png","icone dossier neutre.png","icone image active.png","icone image neutre.png"]),
+    ...toPath('icones', ["icone demarrage session fermee active.png","icone demarrage session fermee neutre.png","icone demarrage session ouverte active.png","icone demarrage session ouverte neutre.png","icone document active.png","icone document neutre.png","icone dossier active.png","icone dossier neutre.png","icone image active.png","icone image neutre.png"]),
 ]);
 window.onload = function () {
     Screen_1.Screen.instance.refresh();

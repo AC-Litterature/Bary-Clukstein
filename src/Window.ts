@@ -26,8 +26,8 @@ export abstract class Window {
 
     protected createArrow(direction: 'right' | 'left' | 'up' | 'down', isVisible: boolean, onClick: () => void) {
         const arrow = new Icon();
-        arrow.activeImageUrl = 'assets/img/flèche/fleche active.png';
-        arrow.neutralImageUrl = 'assets/img/flèche/fleche neutre.png';
+        arrow.activeImageUrl = 'assets/img/fleche/fleche active.png';
+        arrow.neutralImageUrl = 'assets/img/fleche/fleche neutre.png';
         const view = arrow.view;
         view.class(`arrow-${direction}`);
         if(!isVisible) {
